@@ -10,3 +10,4 @@ while True:
     if in_bin.strip().find(b'$HCHDG')==0:
         data_list = in_bin.strip().decode('utf-8').split(',')
         r.hmset('DMC', {'heading': data_list[1]})
+        print('set redis heading')
