@@ -4,4 +4,4 @@ ser = serial.Serial(port='/dev/ttyUSB1', baudrate=9600, bytesize=8, parity='N', 
 
 while True:
     in_bin = ser.read()
-    float(in_bin[0:len(ser_bytes)-2].decode("utf-8"))
+    float(in_bin[0:len(in_bin)-2].decode("utf-8"))
