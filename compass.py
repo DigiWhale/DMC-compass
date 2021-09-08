@@ -4,4 +4,5 @@ ser = serial.Serial(port='/dev/ttyUSB1', baudrate=19200, bytesize=8, parity='N',
 
 while True:
     in_bin = ser.readline()
-    print(in_bin.strip().find(b'$HCHDG'))
+    if in_bin.strip().find(b'$HCHDG'):
+        print(in_bin.strip())
