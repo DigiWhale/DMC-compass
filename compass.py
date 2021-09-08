@@ -4,4 +4,4 @@ ser = serial.Serial(port='/dev/ttyUSB1', baudrate=19200, bytesize=8, parity='N',
 
 while True:
     in_bin = ser.readline()
-    print(in_bin)
+    print(in_bin.strip())
