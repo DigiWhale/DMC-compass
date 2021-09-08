@@ -2,6 +2,7 @@ import serial
 import redis
 
 ser = serial.Serial(port='/dev/ttyUSB1', baudrate=19200, bytesize=8, parity='N', stopbits=1, timeout=5)
+print("Connected to: " + ser.portstr)
 ser.read()
 ser.close()
 ser = serial.Serial(port='/dev/ttyUSB1', baudrate=19200, bytesize=8, parity='N', stopbits=1, timeout=5)
