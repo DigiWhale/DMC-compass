@@ -1,6 +1,6 @@
 import serial
 
-ser = serial.Serial('/dev/ttyUSB1', 115200)
+ser = serial.Serial(port='/dev/ttyUSB1', baudrate=9600, bytesize=8, parity='N', stopbits=1, timeout=1)
 
 while True:
     print(ser.readline()) # Read the newest output from the Arduino
