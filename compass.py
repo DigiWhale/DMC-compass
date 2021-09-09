@@ -9,9 +9,9 @@ print("Connected to: " + ser.portstr)
 r = redis.Redis(host='192.168.1.4', port=6379, db=0, password='Redis2019!')
 # ser.flushInput()
 while True:
-    in_bin = ser.readline()
+    in_bin = ser.read()
     print(in_bin)
-    if in_bin.strip().find(b'$HCHDG')==0:
-        data_list = in_bin.strip().decode('utf-8').split(',')
-        r.hmset('DMC', {'heading': data_list[1]})
-        print('set redis heading')
+    # if in_bin.strip().find(b'$HCHDG')==0:
+    #     data_list = in_bin.strip().decode('utf-8').split(',')
+    #     r.hmset('DMC', {'heading': data_list[1]})
+    #     print('set redis heading')
