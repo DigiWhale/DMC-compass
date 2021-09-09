@@ -1,7 +1,7 @@
 import serial
 import redis
 
-ser = serial.Serial(port='/dev/ttyUSB0', baudrate=19200, bytesize=8, parity='N', stopbits=1, timeout=5)
+ser = serial.Serial(port='/dev/ttyUSB_DMC', baudrate=19200, bytesize=8, parity='N', stopbits=1, timeout=5)
 print("Connected to: " + ser.portstr)
 r = redis.Redis(host='192.168.1.4', port=6379, db=0, password='Redis2019!')
 while True:
